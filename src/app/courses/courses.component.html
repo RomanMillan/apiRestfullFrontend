@@ -1,0 +1,29 @@
+<h1>Lista de cursos</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Duración</th>
+            <th scope="col">Dificultad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of courses">
+            <td>{{course.corsename}}</td>
+            <td>{{course.description}}</td>
+            <td>{{course.duration}}</td>
+            <td>{{course.difficulty}}</td>
+            <td>
+                <button (click)="seeTopics(course.corsename)" class="btn btn-info">Ver Temas</button>
+            </td>
+            <td>
+                <button (click)="updateCourse(course.corsename)" class="btn btn-warning">Actualizar</button>
+            </td>
+            <td>
+                <button (click)="deleteCourse(course.corsename)" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

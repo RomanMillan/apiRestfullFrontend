@@ -1,0 +1,33 @@
+<section id="cover">
+    <div id="cover-caption">
+        <div id="container" class="container">
+            <div class="row">
+                <div class="col-sm-10 offset-sm-1 text-center">
+                    <h1 class="display-3">Actualizar Curso</h1>
+                    <div class="info-form">
+                        <form (ngSubmit)="updateCourse()" class="form-inline justify-content-center">
+                            <div class="form-group">
+                                <label class="sr-only">Curso</label>
+                                <input type="text" [(ngModel)]="course.corsename" name="coursename"  class="form-control" placeholder="Matemáticas">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Descripción</label>
+                                <input type="text" [(ngModel)]="course.description" name="description" class="form-control" placeholder="Cálculo diferencial">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Dificultad</label>
+                                <input type="text" [(ngModel)]="course.difficulty" name="difficulty"   class="form-control" placeholder="Iniciación al cálculo diferencial">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Duración</label>
+                                <input type="number" [(ngModel)]="course.duration" name="duration"  class="form-control" placeholder="500">
+                            </div>
+                            <button type="submit" class="btn btn-success ">Actualizar</button>
+                        </form>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

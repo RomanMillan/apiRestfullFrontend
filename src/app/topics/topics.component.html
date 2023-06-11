@@ -1,0 +1,28 @@
+<h1>Lista de temas</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Curso</th>
+            <th scope="col">Tema</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Nº paginas</th>
+            <th scope="col">Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let topic of topics">
+            <td>{{topic.course}}</td>
+            <td>{{topic.topicname}}</td>
+            <td>{{topic.content}}</td>
+            <td>{{topic.pages}}</td>
+            <td>{{topic.price}}</td>
+            <td>
+                <button (click)="updateTopic(topic.topicname)" class="btn btn-warning">Actualizar</button>
+            </td>
+            <td>
+                <button (click)="deleteTopic(topic.topicname)" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
