@@ -19,7 +19,7 @@ export class AddCourseComponent {
     this.goToListCourse()
   }
 
-  // metodo que redirige a la lista de temas
+  // metodo que redirige a la lista de cursos
   goToListCourse(){
     this.router.navigate(['cursos'])
   }

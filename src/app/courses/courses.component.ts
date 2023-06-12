@@ -23,7 +23,7 @@ export class CoursesComponent implements OnInit{
   }
 
   seeTopics(coursename:string){
-    this.router.navigate([`updateCourse`,coursename])
+    this.router.navigate([`seeTopicsOfCourse`,coursename])
   }
 
   updateCourse(coursename:string){

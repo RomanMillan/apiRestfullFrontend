@@ -21,6 +21,11 @@ export class TopicService {
     return this.httpClient.get<Topic>(`${this.baseURL}tema/${topicname}`);
   }
 
+   // obtiene los temas de un curso
+   getTopicsOfCoruse(coursename:string):Observable<Topic[]>{
+    return this.httpClient.get<Topic[]>(`${this.baseURL}listaTemas/${coursename}`,)
+  }
+
   // añade un tema (llamando a la API)
   postTopic(topic:Topic):Observable<Object>{
     return this.httpClient.post(`${this.baseURL}tema`, topic);

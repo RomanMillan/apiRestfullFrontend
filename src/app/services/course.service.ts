@@ -22,10 +22,6 @@ export class CourseService {
    getCourse(coursename:string):Observable<Course>{
     return this.httpClient.get<Course>(`${this.baseURL}curso/${coursename}`);
   }
-  // obtiene los temas de un curso
-  getTopicsOfCoruse(){
-    // TODO: Obtenr todo los temas de un curso
-  }
 
   // añade un curso (llamando a la API)
   postCourse(course: Course):Observable<Object>{

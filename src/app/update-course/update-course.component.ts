@@ -19,6 +19,12 @@ export class UpdateCourseComponent implements OnInit{
   }
 
   updateCourse() {
-    this.courseService.updateCourse(this.corsename, this.course)
+    this.courseService.updateCourse(this.corsename, this.course).subscribe(()=> this.goToListCourse());
+
+  }
+
+  // metodo que redirige a la lista de cursos
+  goToListCourse(){
+    this.router.navigate(['cursos'])
   }
 }

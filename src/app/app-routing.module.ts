@@ -7,6 +7,7 @@ import { AddCourseComponent } from './add-course/add-course.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UpdateTopicComponent } from './update-topic/update-topic.component';
 import { UpdateCourseComponent } from './update-course/update-course.component';
+import { SeeTopicsOfCourseComponent } from './see-topics-of-course/see-topics-of-course.component';
 
 const routes: Routes = [
   {path : '', component : CoursesComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path : 'addCourse', component : AddCourseComponent},
   {path : 'addUser', component : AddUserComponent},
   {path : 'updateCourse/:id', component : UpdateCourseComponent},
-  {path : 'updateTopic/:id', component : UpdateTopicComponent}
+  {path : 'updateTopic/:id', component : UpdateTopicComponent},
+  {path : 'seeTopicsOfCourse/:id', component : SeeTopicsOfCourseComponent}
 ];
 
 @NgModule({
