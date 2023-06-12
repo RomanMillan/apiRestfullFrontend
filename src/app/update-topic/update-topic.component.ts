@@ -20,7 +20,7 @@ export class UpdateTopicComponent implements OnInit{
 
   // metodo que llama al metodo del servicio para agregar un tema
   updateTopic(){
-    this.topicService.updateTopic(this.topicname, this.topic);
+    this.topicService.updateTopic(this.topicname, this.topic).subscribe()
   }
 
   // metodo que redirige a la lista de temas
